@@ -1,0 +1,96 @@
+# ============================================================
+#  Menu de choix de la quantité (achat / vente)
+#  Placeholders : %item_name% %item_material% %mode% %balance% %owned% %unit_price%
+#                 %buy_price% %sell_price% et, pour les boutons : %amount% %total%
+#  "amount: all" = tout vendre (vente) / maximum achetable (achat)
+#  "modes: [BUY, SELL]" permet de limiter un bouton à l'achat ou à la vente.
+#  Les boutons peuvent utiliser un item Nexo : material: nexo:mon_bouton
+# ============================================================
+title-buy: "&8Acheter &7» &0%item_name%"
+title-sell: "&8Vendre &7» &0%item_name%"
+rows: 3
+
+close-after-transaction: false
+close-on-error: false
+
+filler:
+  enabled: true
+  material: GRAY_STAINED_GLASS_PANE
+  name: " "
+
+items:
+  back:
+    slot: 22
+    material: ARROW
+    name: "&cRetour"
+    action: BACK
+
+preview:
+  slot: 4
+  material: "%item_material%"
+  name: "%item_name%"
+  lore:
+    - ""
+    - "&7Mode : &f%mode%"
+    - "&7Prix unitaire : &e%unit_price%"
+    - "&7Votre solde : &e%balance%"
+    - "&7En votre possession : &e%owned%"
+
+buttons:
+  one:
+    amount: 1
+    slot: 11
+    material: "%item_material%"
+    name: "&e%mode% &fx%amount%"
+    lore:
+      - "&7Total : &e%total%"
+      - ""
+      - "&aClic pour confirmer"
+  sixteen:
+    amount: 16
+    slot: 12
+    material: "%item_material%"
+    name: "&e%mode% &fx%amount%"
+    lore:
+      - "&7Total : &e%total%"
+      - ""
+      - "&aClic pour confirmer"
+  thirtytwo:
+    amount: 32
+    slot: 13
+    material: "%item_material%"
+    name: "&e%mode% &fx%amount%"
+    lore:
+      - "&7Total : &e%total%"
+      - ""
+      - "&aClic pour confirmer"
+  sixtyfour:
+    amount: 64
+    slot: 14
+    material: "%item_material%"
+    name: "&e%mode% &fx%amount%"
+    lore:
+      - "&7Total : &e%total%"
+      - ""
+      - "&aClic pour confirmer"
+  all-sell:
+    amount: all
+    modes: [SELL]
+    slot: 15
+    material: CHEST
+    name: "&6Tout vendre &f(x%amount%)"
+    lore:
+      - "&7Total : &e%total%"
+      - ""
+      - "&aClic pour confirmer"
+  all-buy:
+    amount: all
+    modes: [BUY]
+    slot: 15
+    material: CHEST
+    name: "&6Acheter le maximum &f(x%amount%)"
+    lore:
+      - "&7Total : &e%total%"
+      - "&8(selon votre solde et votre place)"
+      - ""
+      - "&aClic pour confirmer"

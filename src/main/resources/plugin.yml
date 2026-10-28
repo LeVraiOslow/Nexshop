@@ -1,0 +1,18 @@
+name: NexShop
+version: '1.0.0'
+main: fr.nexshop.ShopPlugin
+api-version: '26.2'
+description: Shop GUI (catégories, achat/vente, quantités) compatible Nexo, Vault et EssentialsX
+softdepend: [Vault, Essentials, Nexo, RoseStacker]
+commands:
+  shop:
+    description: Ouvre le shop
+    usage: /shop [categorie|reload]
+    aliases: [boutique]
+permissions:
+  shop.use:
+    description: Utiliser /shop
+    default: true
+  shop.admin:
+    description: Recharger la configuration
+    default: op
