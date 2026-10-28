@@ -1,0 +1,86 @@
+# ============================================================
+#  Menu principal (/shop)
+#  - title      : titre (codes couleur, MiniMessage, unicode Nexo "\uE000", <glyph:nom>)
+#  - rows       : 1 à 6
+#  - filler     : remplissage ("enabled: false" pour le retirer, ex: avec un fond Nexo)
+#  - items      : décorations / boutons. action: CLOSE | MAIN | BACK ; commands: ["[player] spawn"]
+#  - categories : une entrée par catégorie => dossier categories/<id>/ (category.yml + items.yml)
+#
+#  Les "material" acceptent un item vanilla (STONE) ou un item Nexo (nexo:mon_item).
+#  "slot: 10" ou "slots: [0, 1, 2]" ou "slots: 0-8".
+# ============================================================
+title: "&8Shop &7» &6Catégories"
+# Exemple interface Nexo (glyph de fond) :
+# title: "<glyph:shop_main>"
+rows: 3
+
+filler:
+  enabled: true
+  material: BLACK_STAINED_GLASS_PANE   # ou nexo:mon_filler
+  name: " "
+
+items:
+  close:
+    slot: 22
+    material: BARRIER
+    name: "&cFermer"
+    action: CLOSE
+
+categories:
+  blocs:
+    slot: 10
+    material: GRASS_BLOCK
+    name: "&a&lBlocs"
+    lore:
+      - "&7Pierre, terre, bois, verre..."
+      - ""
+      - "&eClic pour ouvrir"
+    # permission: "shop.category.blocs"   # optionnel
+  cultures:
+    slot: 11
+    material: WHEAT
+    name: "&e&lCultures"
+    lore:
+      - "&7Blé, carottes, pommes de terre..."
+      - ""
+      - "&eClic pour ouvrir"
+  minerais:
+    slot: 12
+    material: DIAMOND
+    name: "&b&lMinerais"
+    lore:
+      - "&7Fer, or, diamant..."
+      - ""
+      - "&eClic pour ouvrir"
+  nourritures:
+    slot: 13
+    material: COOKED_BEEF
+    name: "&6&lNourritures"
+    lore:
+      - "&7Viandes, pains, plats cuisinés..."
+      - ""
+      - "&eClic pour ouvrir"
+  redstone:
+    slot: 14
+    material: REDSTONE
+    name: "&c&lRedstone"
+    lore:
+      - "&7Pistons, répéteurs, trémies..."
+      - ""
+      - "&eClic pour ouvrir"
+  spawners:
+    slot: 15
+    material: SPAWNER
+    name: "&5&lSpawners"
+    lore:
+      - "&7Spawners de monstres"
+      - ""
+      - "&eClic pour ouvrir"
+  loots:
+    slot: 16
+    material: BONE
+    name: "&d&lLoots"
+    lore:
+      - "&7Butins de mobs"
+      - ""
+      - "&eClic pour ouvrir"
