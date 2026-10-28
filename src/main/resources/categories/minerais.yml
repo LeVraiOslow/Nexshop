@@ -1,0 +1,28 @@
+title: "&8Shop &7» &bMinerais"
+rows: 6
+
+filler:
+  enabled: true
+  material: BLACK_STAINED_GLASS_PANE
+  name: " "
+
+items:
+  back:
+    slot: 49
+    material: ARROW
+    name: "&cRetour"
+    action: MAIN
+
+shop-items:
+  coal:        { slot: 10, material: COAL, name: "&8Charbon", buy-price: 12, sell-price: 4 }
+  copper:      { slot: 11, material: COPPER_INGOT, name: "&6Lingot de cuivre", buy-price: 15, sell-price: 5 }
+  iron:        { slot: 12, material: IRON_INGOT, name: "&fLingot de fer", buy-price: 30, sell-price: 10 }
+  gold:        { slot: 13, material: GOLD_INGOT, name: "&eLingot d'or", buy-price: 60, sell-price: 20 }
+  lapis:       { slot: 14, material: LAPIS_LAZULI, name: "&9Lapis-lazuli", buy-price: 15, sell-price: 5 }
+  quartz:      { slot: 15, material: QUARTZ, name: "&fQuartz du Nether", buy-price: 20, sell-price: 6 }
+  amethyst:    { slot: 16, material: AMETHYST_SHARD, name: "&dÉclat d'améthyste", buy-price: 25, sell-price: 8 }
+  diamond:     { slot: 19, material: DIAMOND, name: "&bDiamant", buy-price: 250, sell-price: 80 }
+  emerald:     { slot: 20, material: EMERALD, name: "&aÉmeraude", buy-price: 200, sell-price: 60 }
+  netherite:   { slot: 21, material: NETHERITE_INGOT, name: "&8Lingot de netherite", buy-price: 5000, sell-price: 1500 }
+  # Exemple : non achetable (vente uniquement) grâce à "buyable: false"
+  ancient_debris: { slot: 22, material: ANCIENT_DEBRIS, name: "&6Débris antiques", buyable: false, buy-price: 0, sell-price: 400 }
