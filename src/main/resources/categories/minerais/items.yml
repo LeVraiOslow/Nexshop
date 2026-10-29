@@ -1,0 +1,137 @@
+# ============================================================
+#  Items de la catégorie "Minerais"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+shop-items:
+  coal:
+    material: COAL
+    name: "&8Charbon"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 12
+    sell-price: 4
+  copper:
+    material: COPPER_INGOT
+    name: "&6Lingot de cuivre"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 15
+    sell-price: 5
+  iron:
+    material: IRON_INGOT
+    name: "&fLingot de fer"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 30
+    sell-price: 10
+  gold:
+    material: GOLD_INGOT
+    name: "&eLingot d'or"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 60
+    sell-price: 20
+  lapis:
+    material: LAPIS_LAZULI
+    name: "&9Lapis-lazuli"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 15
+    sell-price: 5
+  quartz:
+    material: QUARTZ
+    name: "&fQuartz du Nether"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 20
+    sell-price: 6
+  amethyst:
+    material: AMETHYST_SHARD
+    name: "&dÉclat d'améthyste"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 25
+    sell-price: 8
+  diamond:
+    material: DIAMOND
+    name: "&bDiamant"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 250
+    sell-price: 80
+  emerald:
+    material: EMERALD
+    name: "&aÉmeraude"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 200
+    sell-price: 60
+  netherite:
+    material: NETHERITE_INGOT
+    name: "&8Lingot de netherite"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 5000
+    sell-price: 1500
+  # Exemple : non achetable (vente uniquement) grâce à "buyable: false"
+  ancient_debris:
+    material: ANCIENT_DEBRIS
+    name: "&6Débris antiques"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buyable: false
+    buy-price: 0
+    sell-price: 400

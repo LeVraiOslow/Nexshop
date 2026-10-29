@@ -1,0 +1,167 @@
+# ============================================================
+#  Items de la catégorie "Blocs"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+shop-items:
+  stone:
+    material: STONE
+    name: "&fPierre"
+    lore:
+      - "&7Un bloc de base."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 5
+    sell-price: 1
+  cobblestone:
+    material: COBBLESTONE
+    name: "&7Pierre taillée"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 3
+    sell-price: 0.5
+  deepslate:
+    material: DEEPSLATE
+    name: "&8Ardoise des abîmes"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 6
+    sell-price: 1
+  dirt:
+    material: DIRT
+    name: "&6Terre"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 2
+    sell-price: 0.25
+  sand:
+    material: SAND
+    name: "&eSable"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 4
+    sell-price: 0.5
+  gravel:
+    material: GRAVEL
+    name: "&7Gravier"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 4
+    sell-price: 0.5
+  oak_log:
+    material: OAK_LOG
+    name: "&6Bûche de chêne"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 8
+    sell-price: 2
+  glass:
+    material: GLASS
+    name: "&bVerre"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 6
+    sell-price: 1
+  bricks:
+    material: BRICKS
+    name: "&cBriques"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 12
+    sell-price: 3
+  sandstone:
+    material: SANDSTONE
+    name: "&eGrès"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 8
+    sell-price: 1.5
+  quartz:
+    material: QUARTZ_BLOCK
+    name: "&fBloc de quartz"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 40
+    sell-price: 10
+  obsidian:
+    material: OBSIDIAN
+    name: "&5Obsidienne"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 120
+    sell-price: 25
+  # achat uniquement
+  glowstone:
+    material: GLOWSTONE
+    name: "&eGlowstone"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 30
+  # vente uniquement
+  bedrock_like:
+    material: CRYING_OBSIDIAN
+    name: "&dObsidienne pleureuse"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    sell-price: 30
+  # Exemple item Nexo :
+  # ruby_block: { material: "nexo:ruby_block", buy-price: 500, sell-price: 100 }

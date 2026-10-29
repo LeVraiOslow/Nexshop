@@ -1,0 +1,145 @@
+# ============================================================
+#  Items de la catégorie "Cultures"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+shop-items:
+  wheat:
+    material: WHEAT
+    name: "&eBlé"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 6
+    sell-price: 2
+  wheat_seeds:
+    material: WHEAT_SEEDS
+    name: "&aGraines de blé"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 3
+    sell-price: 0.5
+  carrot:
+    material: CARROT
+    name: "&6Carotte"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 6
+    sell-price: 2
+  potato:
+    material: POTATO
+    name: "&ePomme de terre"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 6
+    sell-price: 2
+  beetroot:
+    material: BEETROOT
+    name: "&cBetterave"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 6
+    sell-price: 2
+  sugar_cane:
+    material: SUGAR_CANE
+    name: "&aCanne à sucre"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 8
+    sell-price: 2.5
+  melon_slice:
+    material: MELON_SLICE
+    name: "&cTranche de pastèque"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 4
+    sell-price: 1
+  pumpkin:
+    material: PUMPKIN
+    name: "&6Citrouille"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 10
+    sell-price: 3
+  cocoa_beans:
+    material: COCOA_BEANS
+    name: "&6Fèves de cacao"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 8
+    sell-price: 2
+  nether_wart:
+    material: NETHER_WART
+    name: "&4Verrue du Nether"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 15
+    sell-price: 4
+  cactus:
+    material: CACTUS
+    name: "&2Cactus"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 8
+    sell-price: 2
+  bamboo:
+    material: BAMBOO
+    name: "&aBambou"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 5
+    sell-price: 1

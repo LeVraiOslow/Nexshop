@@ -1,0 +1,44 @@
+# ============================================================
+#  NexShop - configuration générale
+#  Codes couleur supportés PARTOUT : &a &l ..., &#RRGGBB, et MiniMessage
+#  (<#ff8800>, <gradient:red:blue>texte</gradient>, <bold>...)
+# ============================================================
+
+economy:
+  # auto = Vault puis EssentialsX | vault | essentials
+  provider: auto
+
+currency:
+  # Format des nombres (DecimalFormat) et affichage de la monnaie (%amount% = montant)
+  pattern: "#,##0.##"
+  display: "%amount%$"
+
+sell:
+  # true  = seuls les items "normaux" (sans nom ni lore personnalisé) sont vendables pour un item vanilla
+  # false = n'importe quel item du même type est vendable
+  strict-vanilla-match: true
+
+# Nombre max de commandes exécutées pour le bouton "tout acheter" des items qui n'ont pas d'item physique
+buy-all-cap-for-commands: 64
+
+# Lignes affichées dans les menus de catégories (modifiables aussi item par item avec "lore:")
+# Placeholders : %item_name% %buy_price% %sell_price% %buy_line% %sell_line%
+default-item-lore:
+  - ""
+  - "%buy_line%"
+  - "%sell_line%"
+
+# Textes des lignes %buy_line% et %sell_line% (modifiables ici, valables pour tous les items)
+# %price% = prix formaté. "not-buyable"/"not-sellable" = quand l'achat/la vente est désactivé(e).
+item-lore:
+  # %price% = prix formaté
+  buy: "&a▪ Achat &8» &f%price% &8(&7clic gauche&8)"
+  sell: "&c▪ Vente &8» &f%price% &8(&7clic droit&8)"
+  not-buyable: "&8▪ &7Achat &8» &cIndisponible"
+  not-sellable: "&8▪ &7Vente &8» &cIndisponible"
+  price-disabled: "&cN/A"
+
+sounds:
+  click:   { sound: "ui.button.click", volume: 0.6, pitch: 1.0 }
+  success: { sound: "entity.experience_orb.pickup", volume: 1.0, pitch: 1.2 }
+  error:   { sound: "entity.villager.no", volume: 1.0, pitch: 1.0 }

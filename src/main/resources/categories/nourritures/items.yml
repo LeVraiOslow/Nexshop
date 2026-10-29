@@ -1,0 +1,259 @@
+# ============================================================
+#  Items de la catégorie "Nourritures"
+#  Tous les fichiers .yml de ce dossier (hors category.yml) sont lus : vous pouvez
+#  découper les items en plusieurs fichiers (ex : items.yml, rares.yml...).
+#
+#  Placement : par défaut les items se placent automatiquement dans les "content-slots"
+#  de category.yml et passent sur la page suivante quand il n'y a plus de place.
+#  Pour forcer un emplacement : slot: 10 (ou slots: [10, 11]) et, optionnel, page: 2.
+#
+#  Champs d'un item :
+#    material          : item réel acheté/vendu (STONE ou nexo:mon_item)
+#    display-material  : (optionnel) autre item pour l'affichage
+#    name / lore       : (optionnels) nom et description (codes couleur partout)
+#                        lore par défaut = default-item-lore de config.yml
+#    buy-price         : prix d'achat  (absent ou négatif = non achetable)
+#    sell-price        : prix de vente (absent ou négatif = non vendable)
+#    buyable / sellable: false pour forcer la désactivation
+#    commands          : commandes exécutées à l'achat (console par défaut, "[player] ..." possible)
+#                        placeholders : %player% %amount%
+#    give-item         : donner l'item physique ? (défaut : false si "commands" est défini)
+#    commands-per-unit : true = exécuter les commandes une fois par unité achetée
+#    custom-model-data, glow, hide-flags, amount
+#  Clic gauche = acheter, clic droit = vendre.
+# ============================================================
+# Démo pagination : 22 items pour 18 emplacements (menu de 3 lignes) = 2 pages.
+# L'item "enchanted_golden_apple" est vendable uniquement (buyable: false).
+# ============================================================
+shop-items:
+  bread:
+    material: BREAD
+    name: "&6Pain"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 10
+    sell-price: 3
+  apple:
+    material: APPLE
+    name: "&cPomme"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 8
+    sell-price: 2
+  baked_potato:
+    material: BAKED_POTATO
+    name: "&ePomme de terre cuite"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 10
+    sell-price: 3
+  cooked_beef:
+    material: COOKED_BEEF
+    name: "&cSteak"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 20
+    sell-price: 6
+  cooked_porkchop:
+    material: COOKED_PORKCHOP
+    name: "&dCôtelette cuite"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 20
+    sell-price: 6
+  cooked_chicken:
+    material: COOKED_CHICKEN
+    name: "&6Poulet cuit"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 16
+    sell-price: 5
+  cooked_mutton:
+    material: COOKED_MUTTON
+    name: "&cMouton cuit"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 16
+    sell-price: 5
+  cooked_rabbit:
+    material: COOKED_RABBIT
+    name: "&6Lapin cuit"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 16
+    sell-price: 5
+  cooked_salmon:
+    material: COOKED_SALMON
+    name: "&cSaumon cuit"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 16
+    sell-price: 5
+  cooked_cod:
+    material: COOKED_COD
+    name: "&eMorue cuite"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 14
+    sell-price: 4
+  cookie:
+    material: COOKIE
+    name: "&6Cookie"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 5
+    sell-price: 1.5
+  pumpkin_pie:
+    material: PUMPKIN_PIE
+    name: "&6Tarte à la citrouille"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 15
+    sell-price: 5
+  cake:
+    material: CAKE
+    name: "&dGâteau"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 40
+    sell-price: 12
+  mushroom_stew:
+    material: MUSHROOM_STEW
+    name: "&cSoupe de champignons"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 18
+    sell-price: 6
+  rabbit_stew:
+    material: RABBIT_STEW
+    name: "&6Ragoût de lapin"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 30
+    sell-price: 9
+  beetroot_soup:
+    material: BEETROOT_SOUP
+    name: "&4Soupe de betterave"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 18
+    sell-price: 6
+  honey_bottle:
+    material: HONEY_BOTTLE
+    name: "&eBouteille de miel"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 25
+    sell-price: 8
+  dried_kelp:
+    material: DRIED_KELP
+    name: "&2Algue séchée"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 4
+    sell-price: 1
+  sweet_berries:
+    material: SWEET_BERRIES
+    name: "&cBaies sucrées"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 6
+    sell-price: 2
+  glow_berries:
+    material: GLOW_BERRIES
+    name: "&eBaies lumineuses"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 8
+    sell-price: 2.5
+  golden_carrot:
+    material: GOLDEN_CARROT
+    name: "&6Carotte dorée"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 60
+    sell-price: 18
+  golden_apple:
+    material: GOLDEN_APPLE
+    name: "&6Pomme dorée"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buy-price: 250
+    sell-price: 80
+  enchanted_golden_apple:
+    material: ENCHANTED_GOLDEN_APPLE
+    name: "&d&lPomme dorée enchantée"
+    lore:
+      - "&7Description à modifier."
+      - ""
+      - "%buy_line%"
+      - "%sell_line%"
+    buyable: false
+    sell-price: 2500
+    glow: true
